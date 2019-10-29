@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,6 +11,19 @@
     <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/css/style.css">
     <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Data Tables</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
     <title>User Profile</title>
 </head>
 
@@ -19,13 +32,15 @@
     <!-- main wrapper -->
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
-       <!-- ============================================================== -->
+        <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="index.html">Loan Marvel System</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -36,7 +51,9 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown notification">
-                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span
+                                    class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
                                 <li>
                                     <div class="notification-title"> Notification</div>
@@ -44,32 +61,48 @@
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-img"><img
+                                                            src="assets/images/avatar-2.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Jeremy
+                                                            Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                    <div class="notification-list-user-img"><img
+                                                            src="assets/images/avatar-3.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">John Abraham </span>is
+                                                        now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                    <div class="notification-list-user-img"><img
+                                                            src="assets/images/avatar-4.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Monaan Pechi</span> is
+                                                        watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-img"><img
+                                                            src="assets/images/avatar-5.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Jessica
+                                                            Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -83,29 +116,36 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown connection">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
                             <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
                                 <li class="connection-list">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets/images/github.png" alt="" > <span>Github</span></a>
+                                            <a href="#" class="connection-item"><img src="assets/images/github.png"
+                                                    alt=""> <span>Github</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                            <a href="#" class="connection-item"><img src="assets/images/dribbble.png"
+                                                    alt=""> <span>Dribbble</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                            <a href="#" class="connection-item"><img src="assets/images/dropbox.png"
+                                                    alt=""> <span>Dropbox</span></a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                            <a href="#" class="connection-item"><img src="assets/images/bitbucket.png"
+                                                    alt=""> <span>Bitbucket</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                            <a href="#" class="connection-item"><img src="assets/images/mail_chimp.png"
+                                                    alt=""><span>Mail chimp</span></a>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                            <a href="#" class="connection-item"><img src="assets/images/slack.png" alt="" > <span>Slack</span></a>
+                                            <a href="#" class="connection-item"><img src="assets/images/slack.png"
+                                                    alt=""> <span>Slack</span></a>
                                         </div>
                                     </div>
                                 </li>
@@ -115,8 +155,11 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
-                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                    src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+                                aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
@@ -140,7 +183,8 @@
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -149,24 +193,31 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fa fa-fw fa-user-circle"></i>Dashboard <span
+                                        class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                                data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="index.html">E Commerce Dashboard</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">Product List</a>
+                                                        <a class="nav-link" href="ecommerce-product.html">Product
+                                                            List</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
+                                                        <a class="nav-link" href="ecommerce-product-single.html">Product
+                                                            Single</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
+                                                        <a class="nav-link"
+                                                            href="ecommerce-product-checkout.html">Product Checkout</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -178,17 +229,21 @@
                                             <a class="nav-link" href="dashboard-sales.html">Sales</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                                data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
+                                                        <a class="nav-link"
+                                                            href="dashboard-influencer.html">Influencer</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+                                                        <a class="nav-link" href="influencer-finder.html">Influencer
+                                                            Finder</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+                                                        <a class="nav-link" href="influencer-profile.html">Influencer
+                                                            Profile</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -197,11 +252,14 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-2" aria-controls="submenu-2"><i
+                                        class="fa fa-fw fa-rocket"></i>UI Elements</a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                            <a class="nav-link" href="pages/cards.html">Cards <span
+                                                    class="badge badge-secondary">New</span></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/general.html">General</a>
@@ -225,7 +283,9 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-3" aria-controls="submenu-3"><i
+                                        class="fas fa-fw fa-chart-pie"></i>Chart</a>
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -250,14 +310,17 @@
                                 </div>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-4" aria-controls="submenu-4"><i
+                                        class="fab fa-fw fa-wpforms"></i>Forms</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/form-elements.html">Form Elements</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
+                                            <a class="nav-link" href="pages/form-validation.html">Parsely
+                                                Validations</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/multiselect.html">Multiselect</a>
@@ -265,14 +328,16 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
                                         </li>
-                                         <li class="nav-item">
+                                        <li class="nav-item">
                                             <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Tables</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-5" aria-controls="submenu-5"><i
+                                        class="fas fa-fw fa-table"></i>Tables</a>
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -288,14 +353,17 @@
                                 Features
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i>
+                                    Pages </a>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/blank-page.html">Blank Page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/blank-page-header.html">Blank Page Header</a>
+                                            <a class="nav-link" href="pages/blank-page-header.html">Blank Page
+                                                Header</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/login.html">Login</a>
@@ -319,7 +387,8 @@
                                             <a class="nav-link" href="pages/calendar.html">Calendar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
+                                            <a class="nav-link"
+                                                href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/widgets.html">Widgets</a>
@@ -333,12 +402,15 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/color-picker.html">Color Picker</a>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-7" aria-controls="submenu-7"><i
+                                        class="fas fa-fw fa-inbox"></i>Apps <span
+                                        class="badge badge-secondary">New</span></a>
                                 <div id="submenu-7" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -357,7 +429,9 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-8" aria-controls="submenu-8"><i
+                                        class="fas fa-fw fa-columns"></i>Icons</a>
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -367,7 +441,8 @@
                                             <a class="nav-link" href="pages/icon-material.html">Material Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
+                                            <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline
+                                                Icon</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
@@ -382,7 +457,9 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-9" aria-controls="submenu-9"><i
+                                        class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
                                 <div id="submenu-9" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -395,14 +472,17 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-10" aria-controls="submenu-10"><i
+                                        class="fas fa-f fa-folder"></i>Menu Level</a>
                                 <div id="submenu-10" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Level 1</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11">Level 2</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                                data-target="#submenu-11" aria-controls="submenu-11">Level 2</a>
                                             <div id="submenu-11" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
@@ -441,12 +521,15 @@
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
                                 <h3 class="mb-2">Your Profile </h3>
-                                <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                                <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta,
+                                    fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Your Profile (User)</li>
+                                            <li class="breadcrumb-item"><a href="#"
+                                                    class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Your Profile (User)
+                                            </li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -470,7 +553,8 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="user-avatar text-center d-block">
-                                        <img src="assets/images/spencer.jpg" alt="User Avatar" class="rounded-circle user-avatar-xxl">
+                                        <img src="assets/images/spencer.jpg" alt="User Avatar"
+                                            class="rounded-circle user-avatar-xxl">
                                     </div>
                                     <div class="text-center">
                                         <h2 class="font-24 mb-0"> <%= user %> </h2>
@@ -481,9 +565,10 @@
                                     <h3 class="font-16">Contact Information</h3>
                                     <div class="">
                                         <ul class="list-unstyled mb-0">
-                                        <li class="mb-2"><i class="fas fa-fw fa-envelope mr-2"></i>spencer@gmail.com</li>
-                                        <li class="mb-0"><i class="fas fa-fw fa-phone mr-2"></i>(900) 123 4567</li>
-                                    </ul>
+                                            <li class="mb-2"><i class="fas fa-fw fa-envelope mr-2"></i>spencer@gmail.com
+                                            </li>
+                                            <li class="mb-0"><i class="fas fa-fw fa-phone mr-2"></i>(900) 123 4567</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="card-body border-top">
@@ -501,13 +586,15 @@
                                 <div class="card-body border-top">
                                     <h3 class="font-16">About me</h3>
                                     <div class="">
-                                     
+
                                     </div>
                                 </div>
                                 <div class="card-body border-top">
                                     <h3 class="font-16">Category</h3>
                                     <div>
-                                        <a href="#" class="badge badge-light mr-1">Anime</a><a href="#" class="badge badge-light mr-1">Coding</a><a href="#" class="badge badge-light mr-1">Work</a>
+                                        <a href="#" class="badge badge-light mr-1">Anime</a><a href="#"
+                                            class="badge badge-light mr-1">Coding</a><a href="#"
+                                            class="badge badge-light mr-1">Work</a>
                                     </div>
                                 </div>
                             </div>
@@ -528,20 +615,28 @@
                             <div class="influence-profile-content pills-regular">
                                 <ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="pills-campaign-tab" data-toggle="pill" href="#pills-campaign" role="tab" aria-controls="pills-campaign" aria-selected="true">Profile Overview</a>
+                                        <a class="nav-link active" id="pills-campaign-tab" data-toggle="pill"
+                                            href="#pills-campaign" role="tab" aria-controls="pills-campaign"
+                                            aria-selected="true">Profile Overview</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-packages-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-packages" aria-selected="false">Loans</a>
+                                        <a class="nav-link" id="pills-packages-tab" data-toggle="pill"
+                                            href="#pills-packages" role="tab" aria-controls="pills-packages"
+                                            aria-selected="false">Loans</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-selected="false">Payments</a>
+                                        <a class="nav-link" id="pills-review-tab" data-toggle="pill"
+                                            href="#pills-review" role="tab" aria-controls="pills-review"
+                                            aria-selected="false">Payments</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-msg-tab" data-toggle="pill" href="#pills-msg" role="tab" aria-controls="pills-msg" aria-selected="false">Others</a>
+                                        <a class="nav-link" id="pills-msg-tab" data-toggle="pill" href="#pills-msg"
+                                            role="tab" aria-controls="pills-msg" aria-selected="false">Others</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-campaign" role="tabpanel" aria-labelledby="pills-campaign-tab">
+                                    <div class="tab-pane fade show active" id="pills-campaign" role="tabpanel"
+                                        aria-labelledby="pills-campaign-tab">
                                         <div class="row">
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <div class="section-block">
@@ -585,21 +680,79 @@
                                             <h3 class="section-title">Edit Profile Details</h3>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
+                                    <div class="tab-pane fade" id="pills-packages" role="tabpanel"
+                                        aria-labelledby="pills-packages-tab">
                                         <div class="row">
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <div class="section-block">
                                                     <h2 class="section-title">My Loans</h2>
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h5 class="mb-0">Sample Loan Table</h5>
+                                                            <p>Loan Table with BUttons for pressing.</p>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table id="example"
+                                                                    class="table table-striped table-bordered second"
+                                                                    style="width:100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>Position</th>
+                                                                            <th>Office</th>
+                                                                            <th>Age</th>
+                                                                            <th>Start date</th>
+                                                                            <th>Salary</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Tiger Nixon</td>
+                                                                            <td>System Architect</td>
+                                                                            <td>Edinburgh</td>
+                                                                            <td>61</td>
+                                                                            <td>2011/04/25</td>
+                                                                            <td>$320,800</td>
+                                                                        </tr>
+
+                                                                        <% entries.forEach((entry) => { %>
+                                                                        <tr>
+
+
+                                                                            <td><a
+                                                                                    href="/loandetails/<%= entry.pages %>"><%= entry.title %></a>
+                                                                            </td>
+
+                                                                            <td><%= entry.format %></td>
+                                                                            <td><%= entry.pages %></td>
+                                                                            <td><%= entry.authors %></td>
+                                                                            <td><%= entry.year %></td>
+                                                                            <td><%= entry.publisher %></td>
+                                                                        </tr>
+                                                                        <% }) %>
+
+                                                                        </tfoot>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
-                                        </div>  
-                                    </div>       
-                                    <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-review" role="tabpanel"
+                                        aria-labelledby="pills-review-tab">
                                         <div class="card">
                                             <h5 class="card-header">Campaign Reviews</h5>
                                             <div class="card-body">
                                                 <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Quisque lobortis vestibulum elit, vel fermentum elit pretium et. Nullam id ultrices odio. Cras id nulla mollis, molestie diam eu, facilisis tortor. Mauris ultrices lectus laoreet commodo hendrerit. Nullam varius arcu sed aliquam imperdiet. Etiam ut luctus augue.”</p>
+                                                    <p class="review-text font-italic m-0">“Quisque lobortis vestibulum
+                                                        elit, vel fermentum elit pretium et. Nullam id ultrices odio.
+                                                        Cras id nulla mollis, molestie diam eu, facilisis tortor. Mauris
+                                                        ultrices lectus laoreet commodo hendrerit. Nullam varius arcu
+                                                        sed aliquam imperdiet. Etiam ut luctus augue.”</p>
                                                     <div class="rating-star mb-4">
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
@@ -607,12 +760,16 @@
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
                                                     </div>
-                                                    <span class="text-dark font-weight-bold">Tabitha C. Campbell</span><small class="text-mute"> (Company name)</small>
+                                                    <span class="text-dark font-weight-bold">Tabitha C.
+                                                        Campbell</span><small class="text-mute"> (Company name)</small>
                                                 </div>
                                             </div>
                                             <div class="card-body border-top">
                                                 <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Maecenas rutrum viverra augue. Nulla in eros vitae ante ullamcorper congue. Praesent tristique massa ac arcu dapibus tincidunt. Mauris arcu mi, lacinia et ipsum vel, sollicitudin laoreet risus.”</p>
+                                                    <p class="review-text font-italic m-0">“Maecenas rutrum viverra
+                                                        augue. Nulla in eros vitae ante ullamcorper congue. Praesent
+                                                        tristique massa ac arcu dapibus tincidunt. Mauris arcu mi,
+                                                        lacinia et ipsum vel, sollicitudin laoreet risus.”</p>
                                                     <div class="rating-star mb-4">
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
@@ -620,12 +777,17 @@
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
                                                     </div>
-                                                    <span class="text-dark font-weight-bold">Luise M. Michet</span><small class="text-mute"> (Company name)</small>
+                                                    <span class="text-dark font-weight-bold">Luise M.
+                                                        Michet</span><small class="text-mute"> (Company name)</small>
                                                 </div>
                                             </div>
                                             <div class="card-body border-top">
                                                 <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“ Cras non rutrum neque. Sed lacinia ex elit, vel viverra nisl faucibus eu. Aenean faucibus neque vestibulum condimentum maximus. In id porttitor nisi. Quisque sit amet commodo arcu, cursus pharetra elit. Nam tincidunt lobortis augueat euismod ante sodales non. ”</p>
+                                                    <p class="review-text font-italic m-0">“ Cras non rutrum neque. Sed
+                                                        lacinia ex elit, vel viverra nisl faucibus eu. Aenean faucibus
+                                                        neque vestibulum condimentum maximus. In id porttitor nisi.
+                                                        Quisque sit amet commodo arcu, cursus pharetra elit. Nam
+                                                        tincidunt lobortis augueat euismod ante sodales non. ”</p>
                                                     <div class="rating-star mb-4">
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
@@ -633,12 +795,18 @@
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
                                                     </div>
-                                                    <span class="text-dark font-weight-bold">Gloria S. Castillo</span><small class="text-mute"> (Company name)</small>
+                                                    <span class="text-dark font-weight-bold">Gloria S.
+                                                        Castillo</span><small class="text-mute"> (Company name)</small>
                                                 </div>
                                             </div>
                                             <div class="card-body border-top">
                                                 <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Vestibulum cursus felis vel arcu convallis, viverra commodo felis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin non auctor est, sed lacinia velit. Orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus.”</p>
+                                                    <p class="review-text font-italic m-0">“Vestibulum cursus felis vel
+                                                        arcu convallis, viverra commodo felis bibendum. Orci varius
+                                                        natoque penatibus et magnis dis parturient montes, nascetur
+                                                        ridiculus mus. Proin non auctor est, sed lacinia velit. Orci
+                                                        varius natoque penatibus et magnis dis parturient montes
+                                                        nascetur ridiculus mus.”</p>
                                                     <div class="rating-star mb-4">
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
@@ -646,12 +814,18 @@
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
                                                     </div>
-                                                    <span class="text-dark font-weight-bold">Virgina G. Lightfoot</span><small class="text-mute"> (Company name)</small>
+                                                    <span class="text-dark font-weight-bold">Virgina G.
+                                                        Lightfoot</span><small class="text-mute"> (Company name)</small>
                                                 </div>
                                             </div>
                                             <div class="card-body border-top">
                                                 <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Integer pretium laoreet mi ultrices tincidunt. Suspendisse eget risus nec sapien malesuada ullamcorper eu ac sapien. Maecenas nulla orci, varius ac tincidunt non, ornare a sem. Aliquam sed massa volutpat, aliquet nibh sit amet, tincidunt ex. Donec interdum pharetra dignissim.”</p>
+                                                    <p class="review-text font-italic m-0">“Integer pretium laoreet mi
+                                                        ultrices tincidunt. Suspendisse eget risus nec sapien malesuada
+                                                        ullamcorper eu ac sapien. Maecenas nulla orci, varius ac
+                                                        tincidunt non, ornare a sem. Aliquam sed massa volutpat, aliquet
+                                                        nibh sit amet, tincidunt ex. Donec interdum pharetra dignissim.”
+                                                    </p>
                                                     <div class="rating-star mb-4">
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
@@ -659,7 +833,8 @@
                                                         <i class="fa fa-fw fa-star"></i>
                                                         <i class="fa fa-fw fa-star"></i>
                                                     </div>
-                                                    <span class="text-dark font-weight-bold">Ruby B. Matheny</span><small class="text-mute"> (Company name)</small>
+                                                    <span class="text-dark font-weight-bold">Ruby B.
+                                                        Matheny</span><small class="text-mute"> (Company name)</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -673,30 +848,38 @@
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-msg" role="tabpanel" aria-labelledby="pills-msg-tab">
+                                    <div class="tab-pane fade" id="pills-msg" role="tabpanel"
+                                        aria-labelledby="pills-msg-tab">
                                         <div class="card">
                                             <h5 class="card-header">Send Messages</h5>
                                             <div class="card-body">
                                                 <form>
                                                     <div class="row">
-                                                        <div class="offset-xl-3 col-xl-6 offset-lg-3 col-lg-3 col-md-12 col-sm-12 col-12 p-4">
+                                                        <div
+                                                            class="offset-xl-3 col-xl-6 offset-lg-3 col-lg-3 col-md-12 col-sm-12 col-12 p-4">
                                                             <div class="form-group">
                                                                 <label for="name">Your Name</label>
-                                                                <input type="text" class="form-control form-control-lg" id="name" placeholder="">
+                                                                <input type="text" class="form-control form-control-lg"
+                                                                    id="name" placeholder="">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email">Your Email</label>
-                                                                <input type="email" class="form-control form-control-lg" id="email" placeholder="">
+                                                                <input type="email" class="form-control form-control-lg"
+                                                                    id="email" placeholder="">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="subject">Subject</label>
-                                                                <input type="text" class="form-control form-control-lg" id="subject" placeholder="">
+                                                                <input type="text" class="form-control form-control-lg"
+                                                                    id="subject" placeholder="">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="messages">Messgaes</label>
-                                                                <textarea class="form-control" id="messages" rows="3"></textarea>
+                                                                <textarea class="form-control" id="messages"
+                                                                    rows="3"></textarea>
                                                             </div>
-                                                            <button type="submit" class="btn btn-primary float-right">Send Message</button>
+                                                            <button type="submit"
+                                                                class="btn btn-primary float-right">Send
+                                                                Message</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -722,7 +905,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a
+                                href="https://colorlib.com/wp/">Colorlib</a>.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
@@ -754,7 +938,26 @@
     <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <!-- main js -->
     <script src="assets/libs/js/main-js.js"></script>
-   
+    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="../assets/vendor/multi-select/js/jquery.multi-select.js"></script>
+    <script src="../assets/libs/js/main-js.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/vendor/datatables/js/data-table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+
 </body>
- 
+
 </html>

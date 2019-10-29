@@ -16,8 +16,9 @@ const queryAsync = promisify(database.query).bind(database);
 /**
  *  SQL Queries Used - ttry to refactor into a json file
  */
-var Login_Validate = 'SELECT * FROM test.customer WHERE username = ? AND password = ?';
+var Login_Validate = 'SELECT * FROM myapp.user WHERE username = ? AND password = ?';
 var user_sign_up = 'INSERT INTO test.customer (username, password, email) values (?,?,?)';
+
 
 
 //TODO - create proper home page 
@@ -61,6 +62,7 @@ router.post('/auth', function (request, response) {
     var password = request.body.password;
     if (username && password) {
         database.query(Login_Validate, [username, password], function (error, results, fields) {
+            console.log(password);
             if (results.length > 0) {
                 console.log('User %s has Logged in', username);
                 request.session.loggedin = true;
@@ -83,14 +85,21 @@ router.post('/auth', function (request, response) {
  * 
  * TODO -> Edit Profile page and Profile Dashboard 
  */
-router.get('/profile', function (request, response) {
+router.get('/profile', async function (request, response) {
     if (request.session.loggedin) {
         //response.send('Welcome back, ' + request.session.username + '!');
 
+        var testsql = 'select * from myapp.book;';
+
+        let entries = await queryAsync(testsql);
+
         response.render('profile', {
             user: request.session.username,
-            varialbe: request.session.password
+            varialbe: request.session.password,
+            entries: entries
         });
+
+        console.log(entries);
     } else {
         response.send('Please login to view this page!');
     }
@@ -119,6 +128,21 @@ router.get('/test', async (request, response) => {
     }
 
 });
+
+/**
+ *  For testing
+ * 
+ */
+
+// TODO GET LOAN DETAILS
+router.get('/loandetails/:id', function (req, res) {
+
+    var loanID = req.params.id;
+
+    console.log('Loan ID sent is : ', loanID);
+
+    res.send('Sucess Send');
+})
 
 /**
  *  Default 404 Page - if no Path Found 
