@@ -36,7 +36,7 @@ router.post('/reg', function (request, response) {
     var password = request.body.password;
 
     if (email && password && username) {
-        connection.query(user_sign_up, [username, password, email], function (error, results, fields) {
+        database.query(user_sign_up, [username, password, email], function (error, results, fields) {
             console.log('New Account Added to Database');
             console.log('User : %s', username);
             request.session.loggedin = true;
@@ -60,7 +60,7 @@ router.post('/auth', function (request, response) {
     var username = request.body.username;
     var password = request.body.password;
     if (username && password) {
-        connection.query(Login_Validate, [username, password], function (error, results, fields) {
+        database.query(Login_Validate, [username, password], function (error, results, fields) {
             if (results.length > 0) {
                 console.log('User %s has Logged in', username);
                 request.session.loggedin = true;
