@@ -16,10 +16,8 @@ const queryAsync = promisify(database.query).bind(database);
 /**
  *  SQL Queries Used - ttry to refactor into a json file
  */
-var Login_Validate = 'SELECT * FROM myapp.user WHERE username = ? AND password = ?';
-var user_sign_up = 'INSERT INTO test.customer (username, password, email) values (?,?,?)';
-
-
+var Login_Validate = 'SELECT * FROM lms.customer WHERE username = ? AND password = ?';
+var customer_sign_up = 'CALL lms.Insert_Customers(?,?,?)';
 
 //TODO - create proper home page 
 router.get('/', (request, response) => {
@@ -37,7 +35,7 @@ router.post('/reg', function (request, response) {
     var password = request.body.password;
 
     if (email && password && username) {
-        database.query(user_sign_up, [username, password, email], function (error, results, fields) {
+        database.query(customer_sign_up, [username, password, email], function (_error, results, fields) {
             console.log('New Account Added to Database');
             console.log('User : %s', username);
             request.session.loggedin = true;
@@ -61,7 +59,7 @@ router.post('/auth', function (request, response) {
     var username = request.body.username;
     var password = request.body.password;
     if (username && password) {
-        database.query(Login_Validate, [username, password], function (error, results, fields) {
+        database.query(Login_Validate, [username, password], function (_error, results, fields) {
             console.log(password);
             if (results.length > 0) {
                 console.log('User %s has Logged in', username);
@@ -98,12 +96,37 @@ router.get('/profile', async function (request, response) {
             varialbe: request.session.password,
             entries: entries
         });
-
-        console.log(entries);
     } else {
         response.send('Please login to view this page!');
     }
     response.end();
+});
+
+router.post('/profile/update', function (request, response) {
+
+    var first_name = request.body.first_name;
+    var last_name = request.body.last_name;
+    var address = request.body.address;
+    var postal_code = request.body.postal_code;
+    var handphone = request.body.handphone;
+    var company = request.body.company;
+    var job_title = request.body.job_title;
+    var annual_salary = request.body.annual_salary;
+
+    let object = {
+        first_name,
+        last_name,
+        address,
+        postal_code,
+        handphone,
+        company,
+        job_title,
+        annual_salary
+    };
+
+
+    response.json(object);
+
 });
 
 // TODO -> test page for async programming
