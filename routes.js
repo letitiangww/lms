@@ -30,39 +30,67 @@ router.get('/register', (request, response) => {
     response.render('register');
 });
 
+router.get('/register/again', (request, response) => {
+    response.send("Username is already taken. Please go back and register");
+});
+
 // User Sign Up
-router.post('/reg', function (request, response) {
+router.post('/reg', async function (request, response) {
     var email = request.body.email;
     var username = request.body.username;
     var password = request.body.password;
 
     if (email && password && username) {
         database.query(customer_sign_up, [username, password, email], function (_error, results, fields) {
-            console.log('New Account Added to Database');
-            console.log('User : %s', username);
-            request.session.loggedin = true;
-            request.session.username = username;
-            response.redirect('/profile');
-            response.end();
+
+            if (_error) {
+                response.redirect('/register/again');
+            } else {
+
+                request.session.loggedin = true;
+                request.session.username = username;
+
+                console.log('New Account Added to Database');
+                console.log('User : %s', username);
+
+                var token;
+                database.query(session_token, username, function (_error, results, fields) {
+                    if (results.length > 0) {
+                        token = results[0].cus_id;
+                        console.log(token);
+                        request.session.token = token
+                        response.redirect('/profile/edit');
+                        response.end();
+                    }
+                });
+            }
         });
     } else {
-        response.send('Something Unexpected Happen, Please Try again');
+        response.send('Sever got problem, Please Try again');
         response.end();
     }
 });
 
+router.get('/profile/edit', async (request, response) => {
+    console.log(request.session.token);
+    response.render('editprofile');
+
+});
 
 router.get('/login', (req, res) => {
     res.render('login');
 });
 
 // User Log in Authentication 
+// TODO - Design Seperate Routing Paths for Customer and Staff
 router.post('/auth', function (request, response) {
     var username = request.body.username;
     var password = request.body.password;
+    var role = request.body.radio;
+
+
     var token;
     database.query(session_token, username, function (_error, results, fields) {
-        console.log("Token Added");
         token = results[0].cus_id;
     });
     if (username && password) {
@@ -92,12 +120,11 @@ router.post('/auth', function (request, response) {
 router.get('/profile', async function (request, response) {
     if (request.session.loggedin) {
         //response.send('Welcome back, ' + request.session.username + '!');
-
         var testsql = 'select * from myapp.book;';
         let entries = await queryAsync(testsql);
+
         var token = request.session.token
         console.log(token);
-
         response.render('profile', {
             user: request.session.username,
             varialbe: request.session.password,
@@ -160,6 +187,7 @@ router.get('/test', async (request, response) => {
         });
 
         console.log(selectSQL);
+
         console.log(entries);
 
     } catch (err) {
