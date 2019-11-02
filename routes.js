@@ -93,7 +93,7 @@ router.get('/profile', async function (request, response) {
     if (request.session.loggedin) {
         //response.send('Welcome back, ' + request.session.username + '!');
 
-        var testsql = 'select * from myapp.book;';
+        var testsql = 'select * from lms.loan;';
         let entries = await queryAsync(testsql);
         var token = request.session.token
         console.log(token);
