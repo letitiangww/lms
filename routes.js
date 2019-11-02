@@ -18,10 +18,12 @@ const queryAsync = promisify(database.query).bind(database);
  */
 var Login_Validate = 'SELECT * FROM lms.customer WHERE username = ? AND password = ?';
 var customer_sign_up = 'CALL lms.Insert_Customers(?,?,?)';
+var session_token = 'SELECT cus_id from lms.customer WHERE username = ?';
+var customer_update = 'CALL lms.Update_Customer_Details(?,?,?,?,?,?,?,?,?,?,?)';
 
 //TODO - create proper home page 
 router.get('/', (request, response) => {
-    response.render('home_test');
+    response.render('homepage');
 });
 
 router.get('/register', (request, response) => {
@@ -58,13 +60,18 @@ router.get('/login', (req, res) => {
 router.post('/auth', function (request, response) {
     var username = request.body.username;
     var password = request.body.password;
+    var token;
+    database.query(session_token, username, function (_error, results, fields) {
+        console.log("Token Added");
+        token = results[0].cus_id;
+    });
     if (username && password) {
         database.query(Login_Validate, [username, password], function (_error, results, fields) {
-            console.log(password);
             if (results.length > 0) {
                 console.log('User %s has Logged in', username);
                 request.session.loggedin = true;
                 request.session.username = username;
+                request.session.token = token;
                 response.redirect('/profile');
             } else {
                 response.send('Incorrect Username and/or Password!'); // Can be a redictect 
@@ -77,7 +84,6 @@ router.post('/auth', function (request, response) {
     }
 });
 
-
 /**
  *  Successful Log In - Profile Page 
  * 
@@ -88,13 +94,15 @@ router.get('/profile', async function (request, response) {
         //response.send('Welcome back, ' + request.session.username + '!');
 
         var testsql = 'select * from myapp.book;';
-
         let entries = await queryAsync(testsql);
+        var token = request.session.token
+        console.log(token);
 
         response.render('profile', {
             user: request.session.username,
             varialbe: request.session.password,
-            entries: entries
+            entries: entries,
+            token: token
         });
     } else {
         response.send('Please login to view this page!');
@@ -109,11 +117,15 @@ router.post('/profile/update', function (request, response) {
     var address = request.body.address;
     var postal_code = request.body.postal_code;
     var handphone = request.body.handphone;
+    var dob = request.body.dob;
     var company = request.body.company;
     var job_title = request.body.job_title;
     var annual_salary = request.body.annual_salary;
+    var cus_id = request.session.token
 
-    let object = {
+
+    var obj = {
+        cus_id,
         first_name,
         last_name,
         address,
@@ -124,8 +136,13 @@ router.post('/profile/update', function (request, response) {
         annual_salary
     };
 
+    console.log(obj);
 
-    response.json(object);
+    database.query(customer_update, [cus_id, first_name, last_name, address, postal_code, handphone, company,
+        job_title, annual_salary], function (_error, results, fields) {
+            if (_error)
+                console.log("Something Unexpected Happen");
+        });
 
 });
 
